@@ -1,0 +1,11 @@
+.text {
+  color: var(--text-color);
+
+  background-color: var(--bg-color);
+}
+
+.text--textWidth {
+  min-width: 75vw;
+  max-width: var(--width);
+  width: 100%;
+}

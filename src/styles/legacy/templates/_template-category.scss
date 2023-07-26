@@ -1,0 +1,44 @@
+.grid-button {
+  --top: auto;
+  --right: 0;
+  --bottom: 0;
+  --left: auto;
+  --display: none;
+
+  bottom: var(--bottom);
+  left: var(--left);
+  position: fixed;
+  right: var(--right);
+  top: var(--top);
+
+  display: var(--display);
+  margin: 0;
+  padding: 1rem;
+
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.grid-button:active,
+.grid-button:hover,
+.grid-button:focus {
+  outline: none;
+}
+
+.previews {
+  display: flex;
+
+  overflow-y: hidden;
+}
+
+@media (min-width: 1024px) {
+  .grid-button {
+    --top: 0;
+    --right: 0;
+    --bottom: auto;
+    --display: block;
+  }
+}

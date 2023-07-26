@@ -1,0 +1,47 @@
+.has-text-align-center {
+  text-align: center;
+}
+
+.is-style-lh-default {
+  line-height: 1.5;
+}
+
+.no-clear {
+  clear: none !important;
+}
+
+.wp-block-group,
+.wp-block-group__inner-container {
+  width: 100%;
+}
+
+.wp-block-group {
+  p img {
+    margin: 1rem;
+    max-width: calc(100% - 2rem);
+    height: auto;
+  }
+}
+
+@media (max-width: 781px) {
+  .small-text-on-mobile {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (min-width: 782px) {
+  .wp-block-group {
+    p img {
+      margin: 1rem 1rem 0 1rem;
+      max-width: calc(100vw - 2rem);
+      height: auto;
+
+      float: left;
+    }
+
+    p::after {
+      clear: both;
+      content: '';
+    }
+  }
+}

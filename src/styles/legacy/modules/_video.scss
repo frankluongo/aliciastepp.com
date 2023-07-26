@@ -1,0 +1,39 @@
+.video {
+  flex: 0 0 100vw;
+  width: 100vw;
+}
+
+.video-wrapper {
+  --vid-height: 56.25%;
+  --top: 50%;
+  --transform: translateY(-50%);
+
+  position: relative;
+
+  height: 100%;
+  width: 100%;
+}
+
+.video-wrapper--fullscreen {
+  --vid-height: 100%;
+  --top: 0;
+  --transform: none;
+}
+
+.video-wrapper iframe {
+  left: 0;
+  position: absolute;
+  top: var(--top);
+
+  width: 100%;
+  height: var(--vid-height);
+
+  transform: var(--transform);
+}
+
+@media (min-width: 1024px) {
+  .video {
+    flex: 0 0 var(--width);
+    width: var(--width);
+  }
+}

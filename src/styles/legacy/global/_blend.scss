@@ -1,0 +1,15 @@
+@supports (mix-blend-mode: difference) {
+  .has-blend {
+    background-color: transparent;
+    mix-blend-mode: difference;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  @supports (mix-blend-mode: difference) {
+    .md\:has-blend {
+      background-color: transparent;
+      mix-blend-mode: difference;
+    }
+  }
+}

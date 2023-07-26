@@ -1,0 +1,61 @@
+@keyframes icon {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.scroll-prompt {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 99;
+
+  align-items: center;
+  justify-content: center;
+  display: none;
+  height: 100%;
+  width: 100%;
+
+  color: white;
+
+  background-color: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 500ms ease-in-out;
+}
+
+.scroll-prompt__icon {
+  animation: icon 2s ease-in-out 1s infinite;
+}
+
+body[data-vertical-scroll] {
+  @media (max-width: 1023px) {
+    .scroll-prompt {
+      display: none !important;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .scroll-prompt.display {
+    display: flex;
+  }
+
+  .scroll-prompt.visible {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .scroll-prompt {
+    display: none;
+  }
+}

@@ -1,0 +1,147 @@
+.header {
+  --padding: 0;
+  position: fixed;
+  z-index: 999;
+
+  padding: var(--padding);
+}
+
+.header__logo-wrapper .logo {
+  height: auto;
+  width: var(--logo-size);
+
+  fill: black;
+}
+
+.home .header__logo-wrapper .logo {
+  opacity: 0;
+}
+
+.header__nav {
+  ul {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 1023px) {
+  .header {
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    width: 100%;
+  }
+
+  .header__logo-wrapper {
+    padding: 1rem;
+  }
+
+  .header__nav-wrapper {
+    bottom: 0;
+    left: 100%;
+    position: fixed;
+    right: 0;
+    top: calc(var(--logo-size) - 1px);
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+    background-color: #fff;
+    transition: transform 150ms ease-in-out;
+  }
+
+  .header__nav-wrapper[aria-hidden='false'] {
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  .header__logo-wrapper {
+    flex: 1 0 auto;
+  }
+
+  .header__nav {
+    ul {
+      margin-top: 0;
+    }
+  }
+
+  .header__nav:nth-child(2) {
+    ul {
+      margin-top: 2rem;
+    }
+  }
+
+  .header__toggle-wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header__toggle {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+
+    height: 100%;
+    width: 4rem;
+
+    background-color: transparent;
+  }
+
+  .header__toggle svg {
+    height: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__logo-wrapper .logo {
+    fill: white;
+  }
+
+  .header {
+    --padding: 1.25rem 1rem;
+
+    // min-height: calc(var(--window-height) - var(--footer-height));
+    min-height: var(--window-height);
+  }
+
+  .header__toggle-wrapper {
+    display: none;
+  }
+
+  .header__nav--primary {
+    a {
+      --width: 130px;
+      --height: 35px;
+
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
+      height: var(--height);
+      width: var(--width);
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .header {
+    --padding: 3.25rem 3rem;
+  }
+  .header__nav--primary {
+    a {
+      --height: 45px;
+    }
+  }
+}

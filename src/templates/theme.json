@@ -1,0 +1,152 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "settings": {
+    "appearanceTools": true,
+    "color": {
+      "defaultPalette": false,
+      "palette": [
+        {
+          "slug": "full-black",
+          "color": "#000000",
+          "name": "Full Black"
+        },
+        {
+          "slug": "site-black",
+          "color": "#111111",
+          "name": "Black"
+        },
+        {
+          "slug": "dark-gray",
+          "color": "#333333",
+          "name": "Dark Gray"
+        },
+        {
+          "slug": "medium-gray",
+          "color": "#888888",
+          "name": "Medium Gray"
+        },
+        {
+          "slug": "light-gray",
+          "color": "#d0d0d0",
+          "name": "Light Gray"
+        },
+        {
+          "slug": "orchid",
+          "color": "#e7a19f",
+          "name": "Orchild"
+        },
+        {
+          "slug": "red",
+          "color": "#7e2731",
+          "name": "Red"
+        }
+      ]
+    },
+    "custom": {
+      "contentSize": "1232px",
+      "wideSize": "1440px"
+    },
+    "layout": {
+      "contentSize": "1232px",
+      "wideSize": "1440px"
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "fontFamily": "FreightBig Pro",
+          "slug": "freightbig-pro",
+          "name": "Freight Big Pro"
+        },
+        {
+          "fontFamily": "Ogg Roman",
+          "slug": "ogg-roman",
+          "name": "Ogg Roman"
+        },
+        {
+          "fontFamily": "Founders Grotesk",
+          "slug": "founders-grotesk",
+          "name": "Founders Grotesk"
+        }
+      ],
+      "fontStyle": true,
+      "fontWeight": true,
+      "letterSpacing": true,
+      "lineHeight": true,
+      "textDecoration": true,
+      "textTransform": true,
+      "fontSizes": [
+        {
+          "name": "Microscopic",
+          "size": "10px",
+          "slug": "xxs"
+        },
+        {
+          "name": "XS",
+          "size": "12px",
+          "slug": "xs"
+        },
+        {
+          "name": "Small",
+          "size": "14px",
+          "slug": "small"
+        },
+        {
+          "name": "Default",
+          "size": "16px",
+          "slug": "default"
+        },
+        {
+          "name": "Big",
+          "size": "20px",
+          "slug": "big"
+        },
+        {
+          "name": "Large",
+          "size": "24px",
+          "slug": "large"
+        },
+        {
+          "name": "XL",
+          "size": "32px",
+          "slug": "xl"
+        },
+        {
+          "name": "XXL",
+          "size": "40px",
+          "slug": "xxl"
+        },
+        {
+          "name": "XXXL",
+          "size": "48px",
+          "slug": "xxxl"
+        },
+        {
+          "name": "XXXXL",
+          "size": "56px",
+          "slug": "xxxxl"
+        },
+        {
+          "name": "XXXXXL",
+          "size": "64px",
+          "slug": "xxxxxl"
+        },
+        {
+          "name": "Yuge",
+          "size": "72px",
+          "slug": "yuge"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "text": "#000000"
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--founders-grotesk)",
+      "fontSize": "16px",
+      "lineHeight": "1.6"
+    }
+  }
+}

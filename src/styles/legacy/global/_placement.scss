@@ -1,0 +1,38 @@
+.section[data-placement='top-left'] {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.section[data-placement='top-right'] {
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.section[data-placement='top-center'] {
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.section[data-placement='bottom-left'] {
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.section[data-placement='bottom-right'] {
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.section[data-placement='bottom-center'] {
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.section[data-placement='center-left'] {
+  align-items: center;
+  justify-content: flex-start;
+}
+.section[data-placement='center-right'] {
+  align-items: center;
+  justify-content: flex-end;
+}
+.section[data-placement='center'] {
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,13 @@
+body {
+  overflow: hidden;
+
+  background-color: var(--color-white);
+}
+
+html {
+  transition: opacity 500ms ease-in;
+}
+
+main {
+  background-color: var(--color-white);
+}

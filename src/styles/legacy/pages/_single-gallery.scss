@@ -1,0 +1,16 @@
+body[data-vertical-scroll] {
+  @media (max-width: 1023px) {
+    .single-gallery-page.horizontal-page {
+      display: block;
+      height: auto;
+
+      overflow-y: auto;
+    }
+
+    .single-gallery-page {
+      .single-image {
+        height: auto;
+      }
+    }
+  }
+}

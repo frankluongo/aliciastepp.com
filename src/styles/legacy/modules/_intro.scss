@@ -1,0 +1,35 @@
+.intro {
+  --gutter: 2rem;
+}
+
+.intro__text {
+  padding: 1rem;
+
+  text-align: center;
+}
+
+.intro__title--with-credits {
+  --top-margin: 6vh;
+  margin-top: var(--top-margin);
+}
+
+body[data-vertical-scroll] {
+  @media (max-width: 1023px) {
+    .intro {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .intro {
+    --gutter: 6rem;
+
+    flex: 0 1 auto;
+    padding-left: var(--header-width);
+    padding-right: 3rem;
+  }
+  .intro__title--with-credits {
+    --top-margin: 12vh;
+  }
+}
