@@ -28,12 +28,6 @@
   outline: none;
 }
 
-.previews {
-  display: flex;
-
-  overflow-y: hidden;
-}
-
 @media (min-width: 1024px) {
   .grid-button {
     --top: 0;

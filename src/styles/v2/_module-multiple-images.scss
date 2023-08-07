@@ -1,0 +1,16 @@
+.multiple-images {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.multiple-images--single {
+  grid-template-columns: 1fr;
+}
+
+.multiple-images__img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}

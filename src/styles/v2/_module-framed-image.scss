@@ -1,0 +1,33 @@
+.framed-image {
+  --gutter: 2rem;
+
+  padding: var(--tp) var(--rp) var(--bp) var(--lp);
+}
+
+.framed-image__image {
+  width: 100%;
+
+  border: var(--border-size) solid var(--border-color);
+}
+
+.framed-image__image--small {
+  --border-size: 0.5rem;
+}
+.framed-image__image--medium {
+  --border-size: 1rem;
+}
+.framed-image__image--large {
+  --border-size: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .framed-image__image--small {
+    --border-size: 1rem;
+  }
+  .framed-image__image--medium {
+    --border-size: 2rem;
+  }
+  .framed-image__image--large {
+    --border-size: 3rem;
+  }
+}

@@ -1,5 +1,6 @@
 <?php $tests = get_field('tests', 'option'); ?>
 </main>
+</div>
 <div id="portal" aria-hidden="true">
   <button id="portal-close" title="Close portal">
     <span>&times;</span>

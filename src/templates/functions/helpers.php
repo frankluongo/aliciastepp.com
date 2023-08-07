@@ -35,6 +35,24 @@ function getValue($value)
   return '0';
 }
 
+function get_padding($padding)
+{
+  return <<<EOT
+  --ptm: {$padding['padding_top_mobile']}px;
+  --pbm: {$padding['padding_bottom_mobile']}px;
+  --plm: {$padding['padding_left_mobile']}px;
+  --prm: {$padding['padding_right_mobile']}px;
+  --ptt: {$padding['padding_top_tablet']}px;
+  --pbt: {$padding['padding_bottom_tablet']}px;
+  --plt: {$padding['padding_left_tablet']}px;
+  --prt: {$padding['padding_right_tablet']}px;
+  --ptd: {$padding['padding_top_desktop']}px;
+  --pbd: {$padding['padding_bottom_desktop']}px;
+  --pld: {$padding['padding_left_desktop']}px;
+  --prd: {$padding['padding_right_desktop']}px;
+  EOT;
+}
+
 function setPaddingVars($padding)
 {
   echo '--ptm: ' . getValue($padding['padding_top_mobile']) . 'px;';

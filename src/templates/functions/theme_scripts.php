@@ -12,9 +12,6 @@ function theme_scripts()
   }
   if (is_page()) {
     $template = get_page_template_slug();
-    if ($template == 'template-category.php') {
-      wp_enqueue_script('gallery', get_template_directory_uri() . '/assets/gallery.js');
-    }
     if ($template == 'template-create.php') {
       wp_enqueue_script('create', get_template_directory_uri() . '/assets/create.js');
     }

@@ -15,6 +15,7 @@
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> <?php if ($tests['vertical_mobile_scroll']) : ?> data-vertical-scroll <?php endif; ?>>
-  <?php include(locate_template('components/Header.php')); ?>
-  <main id="main-content">
+<body <?php body_class(); ?>>
+  <div class="site-inner">
+    <?php get_template_part('partials/global', 'header'); ?>
+    <main id="main-content">

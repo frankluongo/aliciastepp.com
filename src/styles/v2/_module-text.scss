@@ -1,0 +1,10 @@
+.text {
+  padding: var(--tp) var(--rp) var(--bp) var(--lp);
+
+  color: var(--text-color);
+  font-size: var(--fs);
+}
+
+.text--textWidth {
+  width: 100%;
+}

@@ -1,39 +1,27 @@
-import LocomotiveScroll from "locomotive-scroll";
-import DynamicImages from "./global/DynamicImages.js";
-import GridToggle from "./global/GridToggle.js";
-import ScrollPrompt from "./global/ScrollPrompt.js";
-import Titles from "./global/Titles.js";
-import VerticalImages from "./global/VerticalImage.js";
-import MultipleImages from "./global/MultipleImages.js";
+import { usePortal } from "./hooks/usePortal.js";
 
-document.addEventListener("DOMContentLoaded", () => {
-  DynamicImages();
-  ScrollPrompt();
-  VerticalImages();
-  MultipleImages();
-});
+function GalleryImages() {
+  const images = document.querySelectorAll("img[data-lightbox-image]");
+  images.forEach(GalleryImage);
+}
 
-window.addEventListener("load", () => {
-  const titleFns = Titles();
-  const scroller = new LocomotiveScroll({
-    el: document.querySelector("[data-scroll-container]"),
-    smooth: true,
-    direction: "horizontal",
-  });
-  const mq = window.matchMedia("(min-width: 1024px)");
-  mq.addEventListener("change", onMqlChange);
+function GalleryImage(image, i) {
+  const { openPortal, fillPortal } = usePortal();
+  const { alt, src } = image;
 
-  function handleScroller() {
-    if (!mq.matches) return scroller.destroy();
-    scroller.init();
+  const imageMarkup = /*html*/ `
+    <div class="lightbox-image-wrapper">
+      <img class="lightbox-image" src="${src}" alt="${alt}" />
+    </div>
+  `;
+
+  image.setAttribute("data-lightbox-index", i);
+  image.addEventListener("click", handleClick);
+
+  function handleClick() {
+    fillPortal(imageMarkup);
+    openPortal();
   }
+}
 
-  function onMqlChange() {
-    handleScroller();
-  }
-
-  handleScroller();
-
-  GridToggle(scroller, titleFns);
-  setInterval(() => window.dispatchEvent(new Event("resize")), 500);
-});
+GalleryImages();

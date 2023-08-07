@@ -35,8 +35,8 @@ body {
 // (https://github.com/sindresorhus/modern-normalize/issues/3)
 body {
   font-family: system-ui, -apple-system,
-    /* Firefox supports this but not yet `system-ui` */ 'Segoe UI', Roboto,
-    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+    /* Firefox supports this but not yet `system-ui` */ "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
 // Grouping content
@@ -69,7 +69,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo,
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo,
     monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
@@ -132,9 +132,10 @@ select {
 
 // Correct the inability to style clickable types in iOS and Safari.
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  appearance: button;
   -webkit-appearance: button;
 }
 
@@ -173,7 +174,8 @@ progress {
 
 // 1. Correct the odd appearance in Chrome and Safari.
 // 2. Correct the outline style in Safari.
-[type='search'] {
+[type="search"] {
+  appearance: textfield;
   -webkit-appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
 }
@@ -221,6 +223,10 @@ pre {
   margin: 0;
 }
 
+html figure {
+  margin: 0 !important;
+}
+
 // Headings
 h1,
 h2,
@@ -250,7 +256,6 @@ iframe,
 embed,
 object {
   display: block;
-  vertical-align: middle;
 }
 
 // Borders

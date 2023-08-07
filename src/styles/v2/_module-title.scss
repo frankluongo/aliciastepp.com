@@ -1,0 +1,15 @@
+.title {
+  max-width: var(--width);
+
+  color: var(--text-color);
+
+  background-color: var(--bg-color);
+}
+
+.title__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  text-align: center;
+}

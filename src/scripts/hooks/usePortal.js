@@ -11,6 +11,7 @@ export function usePortal() {
 
   function closePortal() {
     portal.setAttribute("aria-hidden", true);
+    document.documentElement.classList.remove("portal-open");
     document.removeEventListener("keyup", handlePortalKeyup);
     emptyPortal();
   }
@@ -35,6 +36,7 @@ export function usePortal() {
 
   function openPortal() {
     portal.setAttribute("aria-hidden", false);
+    document.documentElement.classList.add("portal-open");
     document.addEventListener("keyup", handlePortalKeyup);
   }
 }

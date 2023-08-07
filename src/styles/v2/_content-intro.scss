@@ -1,0 +1,44 @@
+// INTRO
+// ==================================================================
+
+.intro {
+  --credits-font-size: clamp(1.5rem, 2vw, 6rem);
+  --intro-title-font-size: clamp(5rem, 20vw, 8rem);
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.intro__inner {
+  position: relative;
+}
+
+// INTRO IMAGE
+// ==================================================================
+
+.intro__image {
+  height: auto;
+  width: 100%;
+}
+
+// INTRO TITLE
+// ==================================================================
+
+.intro__title {
+  position: absolute;
+
+  font-family: var(--font-headings);
+  font-size: var(--intro-title-font-size);
+  line-height: 1;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  max-width: 6em;
+}
+
+@media (min-width: 1024px) {
+  .intro__title {
+    left: -5%;
+    top: -8%;
+  }
+}

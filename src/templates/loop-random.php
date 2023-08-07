@@ -20,8 +20,8 @@ if ($query->have_posts()) :
     <article class="view-more__item">
       <a class="view-more__link" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
         <section class="view-more__images">
-          <img alt="<?php echo $title; ?>" class="view-more__image" data-lazy-img data-loaded="false" data-src="<?php echo $full; ?>">
-          <img data-lazy-img data-loaded="false" class="view-more__image view-more__thumb--<?php echo $thumbnailColor; ?>" data-src="<?php echo $thumb; ?>" alt="<?php echo $title; ?>">
+          <img loading="lazy" alt="<?php echo $title; ?>" class="view-more__image" src="<?php echo $full; ?>">
+          <img loading="lazy" alt="<?php echo $title; ?>" class="view-more__image view-more__thumb--<?php echo $thumbnailColor; ?>" src="<?php echo $thumb; ?>">
         </section>
         <h4 class="h5 view-more__title font-alt">
           <?php echo $title; ?>

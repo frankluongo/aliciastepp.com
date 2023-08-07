@@ -1,7 +1,7 @@
 :root {
-  --freight: 'FreightBig Pro';
-  --ogg: 'Ogg Roman';
-  --founders: 'Founders Grotesk';
+  --freight: "FreightBig Pro";
+  --ogg: "Ogg Roman";
+  --founders: "Founders Grotesk";
   --font-body: var(--founders);
   --font-headings: var(--ogg);
   --font-alternate: var(--freight);
@@ -76,10 +76,6 @@ a:not(.wp-element-button) {
   font-family: var(--font-alternate);
 }
 
-.heading-wrapper * {
-  font-family: var(--font-headings);
-}
-
 .yuge {
   font-size: var(--yuge);
 }
@@ -124,46 +120,6 @@ a:not(.wp-element-button) {
 // Specfic
 // ==================================================================
 
-/* Header */
-// ==================================================================
-.header__logo {
-  fill: var(--color-black);
-}
-
-.header__nav {
-  a {
-    color: var(--color-black);
-    font-size: var(--h4);
-    letter-spacing: -3px;
-    line-height: 0.9;
-    text-decoration: none;
-    text-transform: lowercase;
-  }
-}
-
-.header__nav--secondary {
-  a {
-    font-size: var(--h6);
-    letter-spacing: -1.5px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .header__logo {
-    fill: var(--color-gray-lightest);
-  }
-  .header__nav {
-    a {
-      color: var(--color-gray-lightest);
-    }
-
-    a:focus,
-    a:hover {
-      font-style: italic;
-    }
-  }
-}
-
 /* loop-galleries / Top Level Gallery Page */
 // ==================================================================
 .grid-button {
@@ -175,52 +131,6 @@ a:not(.wp-element-button) {
 
 .grid-button:hover {
   font-weight: 500;
-}
-
-.preview__title {
-  color: var(--color-gray-27);
-  font-family: var(--font-headings);
-  text-transform: uppercase;
-}
-
-[data-display='full'] .preview__title {
-  font-size: var(--h1);
-  line-height: 0.7;
-}
-
-[data-display='grid'] .preview__title {
-  color: var(--color-gray-darkest);
-  font-size: var(--h5);
-  line-height: 1;
-
-  mix-blend-mode: normal;
-}
-
-.preview__see {
-  color: var(--black, black);
-  font-size: var(--h3);
-  font-style: italic;
-  text-transform: lowercase;
-}
-
-/* Intro Component */
-// ==================================================================
-.intro {
-  --credits-font-size: clamp(1.5rem, 2vw, 6rem);
-  --intro-title-font-size: clamp(5rem, 20vw, 30rem);
-}
-
-.intro__credits {
-  font-family: var(--font-alternate);
-  font-size: var(--credits-font-size);
-  line-height: 1;
-}
-
-.intro__title {
-  font-family: var(--font-headings);
-  font-size: var(--intro-title-font-size);
-  line-height: 0.7;
-  text-transform: uppercase;
 }
 
 /* Image With Letterform Component */

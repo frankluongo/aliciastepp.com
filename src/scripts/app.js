@@ -1,22 +1,58 @@
 import "../styles/app.scss";
 
-import Navigation from "./global/Navigation.js";
-import LazyImages from "./global/LazyImages.js";
-import DelayedImages from "./global/DelayedImages.js";
-import { useSize } from "./hooks/useSize.js";
-import { useWindow } from "./hooks/useWindow.js";
-import MotionReel from "./global/MotionReel.js";
+import { usePortal } from "./hooks/usePortal.js";
+
+const embedContent = /*html*/ `
+  <div class="video-embed">
+    <iframe src="https://player.vimeo.com/video/802856858?h=f03be04a0a" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  `;
+const linkHash = "#motion-reel";
 
 document.addEventListener("DOMContentLoaded", () => {
-  DelayedImages();
-  Navigation();
-  LazyImages();
-  useSize(document.querySelector("[data-header]"), "header");
-  useWindow();
   MotionReel();
+  Navigation();
 });
 
 window.addEventListener("load", () => {
   document.documentElement.style.opacity = 1;
-  window.dispatchEvent(new Event("resize"));
 });
+
+function MotionReel() {
+  const mainMenu = document.querySelector("#menu-main-menu");
+  const motion = mainMenu.querySelector(`a[href="${linkHash}"]`);
+  if (!motion) return;
+  const { openPortal, fillPortal } = usePortal();
+
+  function handleClick(e) {
+    e.preventDefault();
+    fillPortal(embedContent);
+    openPortal();
+  }
+
+  motion.addEventListener("click", handleClick);
+}
+
+function Navigation() {
+  const toggle = document.querySelector("[data-toggle]");
+  const nav = document.querySelector("[data-nav]");
+  const mql = window.matchMedia("(max-width: 1023px)");
+  if (!nav || !toggle) return null;
+  setNav(mql.matches);
+
+  function onToggle() {
+    const state = nav.getAttribute("aria-hidden") === "true";
+    setNav(!state);
+  }
+
+  function onChange({ matches }) {
+    setNav(matches);
+  }
+
+  function setNav(bool) {
+    nav.setAttribute("aria-hidden", bool);
+  }
+
+  toggle.addEventListener("click", onToggle);
+  mql.addEventListener("change", onChange);
+}

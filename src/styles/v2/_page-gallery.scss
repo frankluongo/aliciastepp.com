@@ -1,0 +1,15 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-right: 6rem;
+}
+
+.gallery-wrapper {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: auto 1fr;
+  padding-top: 12rem;
+
+  background-color: #faf8f5;
+}
