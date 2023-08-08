@@ -2,23 +2,24 @@
 $id = $args['id'];
 $thumb = get_field('preview_items', $id)['thumbnail']['sizes']['large'];
 $full = get_field('preview_items', $id)['full']['sizes']['xxlarge'];
-$customTitle = get_field('preview_items', $id)['custom_title'];
+$custom_title = get_field('preview_items', $id)['custom_title'];
 $title = get_the_title();
-$thumbnailColor = get_field('preview_items', $id)['thumbnail_color'];
-?>
+$thumbnail_color = get_field('preview_items', $id)['thumbnail_color'];
 
-<article class="preview">
-  <a class="preview__link" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-    <div class="preview__images">
-      <figure class="preview__image-wrapper">
-        <img alt="<?php echo $title; ?>" class="preview__image" loading="lazy" src="<?php echo $full; ?>" />
-      </figure>
-      <figure class="preview__image-wrapper">
-        <img alt="<?php echo $title; ?>" class="preview__image preview__image--<?php echo $thumbnailColor; ?>" loading="lazy" src="<?php echo $thumb; ?>">
-      </figure>
-    </div>
-    <h2 class="preview__title">
-      <?php echo $customTitle ? str_replace(' ', '', $customTitle) : $title; ?>
-    </h2>
-  </a>
-</article>
+$link = get_the_permalink();
+
+echo "<article class=\"preview\">";
+echo "<a class=\"preview__link\" href=\"{$link}\" title=\"{$title}\">";
+echo "<div class=\"preview__images\">";
+echo "<figure class=\"preview__image-wrapper\">";
+echo "<img alt=\"{$title}\" class=\"preview__image\" loading=\"lazy\" src=\"{$full}\" />";
+echo "</figure>";
+echo "<figure class=\"preview__image-wrapper\">";
+echo "<img alt=\"{$title}\" class=\"preview__image preview__image--{$thumbnail_color}\" loading=\"lazy\" src=\"{$thumb}\">";
+echo "</figure>";
+echo "</div>";
+echo "<h2 class=\"preview__title\">";
+echo $custom_title ? str_replace(' ', '', $custom_title) : $title;
+echo "</h2>";
+echo "</a>";
+echo "</article>";

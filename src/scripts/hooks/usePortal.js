@@ -3,16 +3,17 @@ export function usePortal() {
   const portal = document.querySelector("#portal");
   const portalInner = document.querySelector("#portal-inner");
 
-  closer.addEventListener("click", closePortal);
-  portal.addEventListener("click", handlePortalClick);
-  portal.addEventListener("keyup", handlePortalKeyup);
-
   return { closePortal, fillPortal, openPortal };
 
   function closePortal() {
     portal.setAttribute("aria-hidden", true);
     document.documentElement.classList.remove("portal-open");
+
+    closer.removeEventListener("click", closePortal);
     document.removeEventListener("keyup", handlePortalKeyup);
+    portal.removeEventListener("click", handlePortalClick);
+    portal.removeEventListener("keyup", handlePortalKeyup);
+
     emptyPortal();
   }
 
@@ -25,7 +26,7 @@ export function usePortal() {
   }
 
   function handlePortalClick(e) {
-    if (portalInner.contains(e.target));
+    if (portalInner.contains(e.target)) return;
     closePortal();
   }
 
@@ -37,6 +38,10 @@ export function usePortal() {
   function openPortal() {
     portal.setAttribute("aria-hidden", false);
     document.documentElement.classList.add("portal-open");
+
+    closer.addEventListener("click", closePortal);
     document.addEventListener("keyup", handlePortalKeyup);
+    portal.addEventListener("click", handlePortalClick);
+    portal.addEventListener("keyup", handlePortalKeyup);
   }
 }

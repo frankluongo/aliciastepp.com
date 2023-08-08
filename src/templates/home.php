@@ -1,6 +1,8 @@
 <?php
-  get_header();
-  echo '<section class="container my-3 lg:my-6">';
-  get_template_part('loop');
-  echo '</section>';
-  get_footer();
+get_header();
+if (have_posts()) :
+  while (have_posts()) : the_post();
+    the_content();
+  endwhile;
+endif;
+get_footer();

@@ -1,14 +1,9 @@
 <?php
 /* Template Name: COVID Page */
 get_header();
-?>
-<section class="content">
-  <?php if (have_posts()) :
-    while (have_posts()) : the_post();
-      the_content();
-    endwhile;
-  endif;
-  ?>
-</section>
-
-<?php get_footer(); ?>
+if (have_posts()) :
+  while (have_posts()) : the_post();
+    the_content();
+  endwhile;
+endif;
+get_footer();

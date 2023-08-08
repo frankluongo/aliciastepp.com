@@ -1,5 +1,4 @@
 <?php
-
 require_once('functions/acf_options.php');
 require_once('functions/base_support.php');
 require_once('functions/custom_blocks.php');
