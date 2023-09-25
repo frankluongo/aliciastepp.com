@@ -1,0 +1,28 @@
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+
+  --color-gray-darkest: #111;
+  --color-gray-darker: #333;
+  --color-gray-27: #444444;
+  --color-gray-dark: #888;
+  --color-gray-lightest: #d0d0d0;
+
+  --color-orchid: #e7a19f;
+  --color-red: #7e2731;
+  --logo-size: 72px;
+
+  --header-height: 4.5rem;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --logo-size: 130px;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --logo-size: 198px;
+  }
+}

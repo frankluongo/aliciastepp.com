@@ -1,0 +1,21 @@
+.single-image {
+  background: var(--bg-color, white);
+  background-image: var(--bg-img, none);
+}
+
+.single-image__img {
+  display: block;
+  height: auto;
+  width: 100%;
+
+  overflow: hidden;
+}
+
+.single-image__img--border {
+  border: var(--border-size) solid var(--border-color);
+}
+
+.single-image__picture {
+  display: block;
+  width: 100%;
+}

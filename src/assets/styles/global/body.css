@@ -1,0 +1,44 @@
+body {
+  background-color: var(--color-white);
+}
+
+body.home {
+  height: 100%;
+}
+
+body.home .site-inner {
+  display: block;
+
+  max-width: none;
+}
+
+html {
+  transition: opacity 500ms ease-in;
+}
+
+main {
+  background-color: var(--color-white);
+}
+
+#main-content {
+  padding-block: 3.25rem;
+  padding-inline: 1rem;
+}
+
+.single-gallery #main-content,
+.home #main-content {
+  padding-block: 0;
+}
+
+.site-inner {
+  display: grid;
+  max-width: 90rem;
+
+  margin-inline: auto;
+}
+
+@media (min-width: 1024px) {
+  .site-inner {
+    grid-template-columns: auto 1fr;
+  }
+}
