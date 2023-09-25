@@ -1,5 +1,6 @@
 <?php
 $tests = get_field('tests', 'option');
+$cat = get_field('category');
 $query = new WP_Query(
   array(
     'post_type' => 'gallery',

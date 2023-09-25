@@ -1,13 +1,11 @@
 .credits-inner {
-  position: sticky;
-  top: 0;
+  position: relative;
 
-  padding: 20vh 1rem 0;
-}
+  align-items: center;
+  display: flex;
+  gap: 2rem;
 
-.credits__back-button {
-  position: absolute;
-  top: 5vh;
+  padding-block: 1rem;
 }
 
 .credits-back-button__link {
@@ -38,4 +36,15 @@
   fill: currentColor;
 
   transition: fill 200ms ease-in-out;
+}
+
+@media (min-width: 1024px) {
+  .credits__back-button {
+    position: absolute;
+    top: 5vh;
+  }
+
+  .credits-inner {
+    padding: 20vh 1rem 0;
+  }
 }

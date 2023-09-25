@@ -1,11 +1,11 @@
 <?php
 get_header();
+get_template_part('partials/content', 'subgallery-hero');
 echo "<div class=\"gallery-wrapper\">";
 echo "<aside class=\"gallery-credits\">";
 get_template_part('partials/content', 'credits');
 echo "</aside>";
 echo "<div class=\"gallery\">";
-get_template_part('partials/content', 'intro');
 if (have_rows('components')) {
   while (have_rows('components')) {
     the_row();

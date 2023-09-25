@@ -31,8 +31,13 @@ main {
 
 .site-inner {
   display: grid;
-  grid-template-columns: auto 1fr;
   max-width: 90rem;
 
   margin-inline: auto;
+}
+
+@media (min-width: 1024px) {
+  .site-inner {
+    grid-template-columns: auto 1fr;
+  }
 }
