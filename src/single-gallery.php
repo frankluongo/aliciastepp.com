@@ -1,10 +1,8 @@
 <?php
 get_header();
 get_template_part('partials/content', 'subgallery-hero');
-echo "<div class=\"gallery-wrapper\">";
-echo "<aside class=\"gallery-credits\">";
 get_template_part('partials/content', 'credits');
-echo "</aside>";
+
 echo "<div class=\"gallery\">";
 if (have_rows('components')) {
   while (have_rows('components')) {
@@ -16,7 +14,7 @@ if (have_rows('components')) {
     echo "</div>";
   }
 }
+get_template_part('partials/content', 'back-button');
 get_template_part('partials/content', 'view-more');
-echo "</div>";
 echo "</div>";
 get_footer();

@@ -23,6 +23,10 @@ async function AnimatedLogo() {
 }
 
 function Slideshow() {
+  const slideshow = document.querySelector("[data-slideshow]");
+  const time = slideshow?.dataset?.timing
+    ? parseInt(slideshow?.dataset?.timing) * 1000
+    : SLIDESHOW_TIMING;
   const slides = Array.from(document.querySelectorAll("[data-slide]"));
   if (!slides || !slides?.length) return;
   const state = {
@@ -46,5 +50,5 @@ function Slideshow() {
   }
 
   updateState();
-  setInterval(updateState, SLIDESHOW_TIMING);
+  setInterval(updateState, time);
 }

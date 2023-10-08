@@ -9,7 +9,7 @@ const dist = process.env.DIST_DIR;
 const events = ["change", "rename"];
 const src = "src";
 const transformFiles = [".js", ".jsx", ".css"];
-const url = process.env.URL;
+// const url = process.env.URL;
 
 // INITIALIZATION
 // ======================================================================================
@@ -52,7 +52,6 @@ function watchFiles() {
 async function changeHandler(eventType, filename) {
   if (!events.includes(eventType)) return;
   await copyOrTransform(filename);
-  bs.reload();
 }
 
 async function copyOrTransform(filename) {
