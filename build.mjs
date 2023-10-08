@@ -66,7 +66,7 @@ async function copyOrTransform(filename) {
     fs.mkdirSync(destinationFilePath, { recursive: true });
   } else {
     try {
-      if (transformFiles.includes(fileType)) {
+      if (filename !== "style.css" && transformFiles.includes(fileType)) {
         await transformFile(sourceFilePath, destinationFilePath);
       } else {
         await copyFile(sourceFilePath, destinationFilePath);
