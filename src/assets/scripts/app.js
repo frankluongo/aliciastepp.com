@@ -1,5 +1,3 @@
-import "../styles/app.scss";
-
 import Navigation from "./global/Navigation.js";
 import LazyImages from "./global/LazyImages.js";
 import DelayedImages from "./global/DelayedImages.js";

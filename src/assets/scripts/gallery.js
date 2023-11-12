@@ -14,11 +14,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 window.addEventListener("load", () => {
+  const el = document.querySelector("[data-scroll-container]");
+
   const titleFns = Titles();
   const scroller = new LocomotiveScroll({
-    el: document.querySelector("[data-scroll-container]"),
+    el,
     smooth: true,
     direction: "horizontal",
+    gestureDirection: "both",
   });
   const mq = window.matchMedia("(min-width: 1024px)");
   mq.addEventListener("change", onMqlChange);
@@ -36,4 +39,14 @@ window.addEventListener("load", () => {
 
   GridToggle(scroller, titleFns);
   setInterval(() => window.dispatchEvent(new Event("resize")), 500);
+  ConvertSwipe(el);
 });
+
+function ConvertSwipe(el) {
+  window.addEventListener("wheel", onWheel, { passive: false });
+
+  function onWheel(e) {
+    if (e.deltaX === 0) return;
+    e.preventDefault();
+  }
+}
