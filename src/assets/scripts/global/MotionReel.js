@@ -19,7 +19,6 @@ const embedContent = /*html*/ `
 const linkHash = "#motion-reel";
 
 export default function MotionReel() {
-  console.log("motion");
   const mainMenu = document.querySelector("#menu-main-menu");
   const motion = mainMenu.querySelector(`a[href="${linkHash}"]`);
   if (!motion) return;
