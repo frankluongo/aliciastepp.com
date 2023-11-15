@@ -1,5 +1,5 @@
-@import "./global";
-@import "./legacy";
+@import "./global/index";
+@import "./legacy/index";
 
 @media (max-width: 1023px) {
   body[data-vertical-scroll] .multiple-images-picture__img {
