@@ -1,27 +1,17 @@
-.homepage-logo .logo {
-  left: var(--x);
-  position: absolute;
-  top: var(--y);
-  z-index: 99;
+@media (min-width: 1024px) {
+  .homepage-logo .logo {
+    left: var(--x);
+    position: absolute;
+    top: var(--y);
+    z-index: 99;
 
-  margin: 0 auto;
-  width: var(--width);
+    margin: 0 auto;
+    width: var(--width);
 
-  pointer-events: none;
-  will-change: transform;
-}
+    pointer-events: none;
+    will-change: transform;
+  }
 
-.home .header {
-  mix-blend-mode: normal;
-
-  color: white;
-}
-
-.home .header__nav a {
-  color: white;
-}
-
-@media (min-width: 768px) {
   .homepage-logo .logo {
     left: 50%;
     top: 50%;
@@ -44,5 +34,15 @@
 
     opacity: 0.65;
     transform: translate3d(0, 0, 0);
+  }
+
+  .home .header {
+    mix-blend-mode: normal;
+
+    color: white;
+  }
+
+  .home .header__nav a {
+    color: white;
   }
 }

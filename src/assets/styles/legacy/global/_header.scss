@@ -13,10 +13,6 @@
   fill: black;
 }
 
-.home .header__logo-wrapper .logo {
-  opacity: 0;
-}
-
 .header__nav {
   ul {
     align-items: center;
@@ -105,6 +101,10 @@
 }
 
 @media (min-width: 1024px) {
+  .home .header__logo-wrapper .logo {
+    opacity: 0;
+  }
+
   .header__logo-wrapper .logo {
     fill: white;
   }

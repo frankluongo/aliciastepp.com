@@ -1,5 +1,5 @@
 export default function GridToggle(scroller, titleFns) {
-  const state = { grid: false };
+  const state = { grid: true };
   const toggle = document.querySelector("[data-grid-button]");
   const wrapper = document.querySelector("[data-grid-wrapper]");
   if (!toggle) return null;
