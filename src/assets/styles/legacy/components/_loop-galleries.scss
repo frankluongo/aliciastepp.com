@@ -130,14 +130,14 @@ body[data-vertical-scroll] {
 
 // When the grid is active
 
-.previews[data-grid-status='grid'] #main-content {
+.previews[data-grid-status="grid"] #main-content {
   padding-left: var(--grid-offset);
 }
 
-.previews[data-display='grid'] {
+.previews[data-display="grid"] {
   display: grid;
   gap: var(--grid-gutter);
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   height: calc;
   padding: var(--grid-gutter);
 
@@ -193,7 +193,7 @@ body[data-vertical-scroll] {
   }
 }
 
-[data-display='full'] {
+[data-display="full"] {
   .preview {
     position: relative;
 
@@ -222,7 +222,7 @@ body[data-vertical-scroll] {
 }
 
 @media (max-width: 1023px) {
-  .previews[data-display='full'] {
+  .previews[data-display="full"] {
     .preview + .preview {
       margin-left: 3.5rem;
     }
@@ -255,7 +255,7 @@ body[data-vertical-scroll] {
     --grid-height: var(--window-height);
   }
 
-  [data-display='full'] {
+  [data-display="full"] {
     .offset {
       --offset-width: calc(var(--header-width) / 2);
       position: relative;
@@ -300,7 +300,7 @@ body[data-vertical-scroll] {
     }
   }
 
-  .previews[data-display='grid'] {
+  .previews[data-display="grid"] {
     padding: 4rem 4rem 4rem calc(var(--header-width) + 4rem);
   }
 
