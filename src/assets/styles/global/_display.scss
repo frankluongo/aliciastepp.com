@@ -1,3 +1,4 @@
+@import "./variables";
 $displays: (block, inline, inline-block, flex, grid, none);
 
 @each $display in $displays {
