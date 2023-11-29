@@ -5,6 +5,10 @@
   body[data-vertical-scroll] .multiple-images-picture__img {
     margin-inline: auto;
   }
+
+  .homepage-logo {
+    display: none;
+  }
 }
 
 a:not(.wp-element-button) {
