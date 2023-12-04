@@ -39,10 +39,10 @@ window.addEventListener("load", () => {
 
   GridToggle(scroller, titleFns);
   setInterval(() => window.dispatchEvent(new Event("resize")), 500);
-  ConvertSwipe(el);
+  ConvertSwipe();
 });
 
-function ConvertSwipe(el) {
+function ConvertSwipe() {
   window.addEventListener("wheel", onWheel, { passive: false });
 
   function onWheel(e) {

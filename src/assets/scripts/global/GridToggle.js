@@ -1,9 +1,9 @@
 export default function GridToggle(scroller, titleFns) {
   const toggle = document.querySelector("[data-grid-button]");
+  if (!toggle) return null;
   const wrapper = document.querySelector("[data-grid-wrapper]");
   const grid = wrapper.dataset.display === "grid";
   const state = { grid };
-  if (!toggle) return null;
 
   function toggleHandler() {
     state.grid = !state.grid;
